@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useCounterStore } from "@/stores/counter";
+import { Button } from "@/components/ui/button";
 
 const counterStore = useCounterStore();
 </script>
@@ -8,6 +9,6 @@ const counterStore = useCounterStore();
   <div>
     <p>Count: {{ counterStore.count }}</p>
     <p>Double: {{ counterStore.doubleCount }}</p>
-    <button @click="counterStore.increment">+1</button>
+    <Button @click="counterStore.increment">+1</Button>
   </div>
 </template>
