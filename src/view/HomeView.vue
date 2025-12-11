@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { useCounterStore } from "@/stores/counter";
+
+const counterStore = useCounterStore();
 </script>
 
 <template>
-  <div class="home">
-    <h1>메인 페이지</h1>
-    <p>여기는 홈 화면입니다.</p>
+  <div>
+    <p>Count: {{ counterStore.count }}</p>
+    <p>Double: {{ counterStore.doubleCount }}</p>
+    <button @click="counterStore.increment">+1</button>
   </div>
 </template>
